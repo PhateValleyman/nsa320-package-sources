@@ -1,20 +1,5 @@
 
-case "$FFP_ARCH" in
-	arm)
-		GNU_BUILD=arm-ffp-linux-uclibcgnueabi
-		;;
-	oarm)
-		GNU_BUILD=arm-ffp-linux-uclibc
-		;;
-	"")
-		echo "FFP_ARCH unset"
-		exit 1
-		;;
-	*)
-		echo "FFP_ARCH unknown"
-		exit 1
-		;;
-esac
+GNU_BUILD=arm-ffp-linux-uclibcgnueabi
 
 GNU_HOST=$GNU_BUILD
 GNU_TARGET=$GNU_HOST
